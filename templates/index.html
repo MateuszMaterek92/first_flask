@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <style>
+.block {
+  display: block;
+  width: 10%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+  <title>Machine Learning FLASK API</title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Przewidywane zuzycie ciepla</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+    	<input type="text" name="przeznaczenie" placeholder="przeznaczenie" required="required" />
+        <input type="text" name="wiek" placeholder="wiek" required="required" />
+		<input type="text" name="kubatura" placeholder="kubatura [m3]" required="required" />
+        <br>
+        <button class="block">Oblicz</button>
+
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+     <br>
+
+
+   <br>
+     LEGENDA:<br>
+     przeznaczenie mieszkalne - wpisz 1<br>
+     przeznaczenie uslugowe - wpisz 2
+
+
+ </div>
+
+
+</body>
+</html>
