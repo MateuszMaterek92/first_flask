@@ -1,1 +1,1 @@
-<img src="/Users/mateuszmaterek/Downloads/app.jpg">
+<img src="zuzycie.herokuapp.com">
