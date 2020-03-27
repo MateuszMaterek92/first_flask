@@ -1,1 +1,1 @@
-![](app.jpg)
+![](/Users/mateuszmaterek/Downloads/app.jpg)
